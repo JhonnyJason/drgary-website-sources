@@ -1,0 +1,25 @@
+//- header structure
+#header
+    #logo: svg: use(href="#svg-logo-icon")    
+    #header-top-section.has-content-width
+        #header-signature
+            p.signature-title Assoz. Prof. Priv. Doz. Dr. med. univ.
+            p.signature-name Thomas Gary
+            .line
+            p.signature-description Facharzt für Innere Medizin</br>& Gefäßmedizin</br>
+            p.signature-description <a href="tel:+4366488188728">+43 (0)664/881 887 28</a> | <a href="mailto:termin@drgary.at">termin@drgary.at</a>
+        .clear
+    #header-menu-section
+        #header-menu.has-content-width
+            button#menu-link-services.header-menu-item Leistungen
+            button#menu-link-ordination.header-menu-item Ordination
+            button#menu-link-aboutme.header-menu-item Über mich
+
+.top-section
+    include servicesubmenu.pug
+    h1#aboutme-title Über Mich
+    h1#contact-title Kontakt
+    h1#index-title Impresum
+    h1#impressum-title Impresum    
+    h1#ordination-title Unsere Ordination
+    h1#services-title Unsere Leistungen

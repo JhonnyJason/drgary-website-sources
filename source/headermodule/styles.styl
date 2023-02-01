@@ -1,0 +1,167 @@
+// header styles
+#header
+    position relative
+    width: 100%
+    height: auto
+    box-shadow: 0 0 4px 0 alpha(black, 0.2)
+    #logo
+        pointer-events: none
+        display: block
+        height: 70px
+        width: 70px
+        margin: 20px auto 0 auto
+        @media desktopscreen
+            position absolute
+            margin-top 0
+            top 0
+            left 50%
+            transform translateX(-50%)
+            height: 97px
+            width: 97px
+
+    #header-top-section
+        cursor pointer 
+        margin: 20px auto 20px auto
+
+        #header-signature
+            margin: auto
+            text-align: center
+            @media desktopscreen
+                float: right
+                margin-bottom: 5px
+                text-align: right
+            p.signature-title
+                font-family: 'Museo 500'
+                font-size: 13px
+                margin-bottom: 5px
+            p.signature-name
+                font-family: 'Museo 700'
+                font-size: 17px
+                color: garyred
+                margin-bottom: 6px
+            .line
+                width: calc(100% - 40px)
+                height: 1px
+                background: #b5b1b1
+                margin: 0 20px 5px 20px
+                @media desktopscreen
+                    width: 100%
+                    margin:0 0 5px 0
+            p.signature-description
+                font-size: 13px
+                margin-bottom: 3px
+                a
+                    text-decoration: none
+    #header-menu-section
+        @media desktopscreen
+            border-top: solid 1px #b5b1b1
+            border-bottom: solid 1px #b5b1b1
+        #header-menu
+            margin: 20px auto
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            @media desktopscreen
+                flex-direction: row
+                margin: 0 auto
+            .header-menu-item
+                text-transform: uppercase
+                cursor: pointer
+                width: 180px
+                font-family: "Museo Sans"
+                font-size: 20px
+                line-height: 180%
+                //mobile styles
+                color: white
+                margin: 10px auto
+                border-radius: 10px
+                background-color: garyred
+                @media desktopscreen //desktop styles
+                    margin: 0
+                    padding-top: 10px
+                    border-bottom: 7px solid garyred
+                    border-radius: 0
+                    background-color: white
+                    color: black
+                    border-bottom: 7px solid garyred
+            .header-menu-item:hover
+                background-color: rgba(228, 29, 76, 0.2)
+            .header-menu-item.home
+                font-family: "Museo Sans 500"
+    #header-menu-section.fixed
+            position: fixed
+            top:0
+            width: 100%
+            background-color: white
+            z-index: 999
+            #header-menu.collapsed
+                cursor: pointer
+                background-image: url("/img/hamburger.svg")
+                background-repeat: no-repeat
+                background-position: center
+                height: 30px
+                @media desktopscreen
+                    height: auto
+                    background-image: none
+                .header-menu-item
+                    display: none
+                    @media desktopscreen
+                        display: block
+
+
+// servicesubmenu
+#outer-content-table
+    z-index: 998
+    transition: all 0.7s ease
+    margin-top: 0
+    padding-top: 0
+    background: transparent
+    position absolute
+    top: 0
+    left: 50%
+    transform: translate( -50%, 0)
+    #has-content-table-width
+        width: 100%
+        background-color: rgba(255, 255, 255, 0.5)
+        @media desktopscreen
+            width: 316px
+        #content-table
+            padding-top 20px
+            padding-bottom: 10px
+            button
+                color: white
+                background-color: garyred
+                display: block
+                cursor: pointer
+                width: 85%
+                margin-left: auto
+                margin-right: auto
+                margin-bottom: 8px
+                padding: 8px 0
+#outer-content-table.fixed
+    position: fixed
+    top: 70px
+    @media desktopscreen
+        top: 53px
+#outer-content-table.closed
+    opacity: 0
+
+
+.top-section
+    position: relative
+    width: 100%
+    background-size: cover
+    background-position: center
+    h1
+        display none
+        text-align: center
+        text-transform: uppercase
+        color: white
+        font-size: 40px
+        margin: auto
+        padding-top: 170px
+        padding-bottom: 170px
+        // background-color: rgba(0,0,0, 0.15)
+        @media desktopscreen
+            font-size: 60px
+

@@ -1,23 +1,5 @@
-configmodule = {name: "configmodule", uimodule: false}
-############################################################
-#region printLogFunctions
-log = (arg) ->
-    if allModules.debugmodule.modulesToDebug["configmodule"]?  then console.log "[configmodule]: " + arg
-    return
-ostr = (obj) -> JSON.stringify(obj, null, 4)
-olog = (obj) -> log "\n" + ostr(obj)
-print = (arg) -> console.log(arg)
-#endregion
 
 ########################################################
-configmodule.initialize = ->
-    log "configmodule.initialize"
-    return    
-
-########################################################
-#region exposedProperties
-configmodule.prop = true
-
-#endregion
-
-export default configmodule
+export formId = "CA4BD51AE638F911E8A68ED8C462D60FE6B1432C11311E21DEE4CC2595D81BA8"
+# export formMailerURL = "https://form-mailer.dotv.ee"
+export formMailerURL = "https://localhost:6999"

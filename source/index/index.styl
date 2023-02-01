@@ -12,3 +12,19 @@ Global Styles
 Including other components
 ==============================================================================*/
 @import '../allmodules/allstyles.styl'
+
+/*==============================================================================
+Top Section Components
+==============================================================================*/
+.top-section
+    background-image: url("/img/index-image.jpg")
+    @media desktopscreen 
+        background-image: url("/img/index-image-desktop.jpg")
+    #index-title
+        display block
+        opacity: 0
+        
+/*==============================================================================
+Main content
+==============================================================================*/
+@import 'components/main.styl'

@@ -1,0 +1,39 @@
+doctype html
+html(lang="de")
+    head
+        meta(charset='utf-8')
+        
+        //- Title and Description
+        title Prof. Dr. Thomas Gary - Impressum
+        meta(name='description', content='Dr. Thomas Gary Facharzt für Gefäßmedizin und Innere Medizin - Zuhause in Graz - Willkommen in unserer Ordination, wir freuen uns auf Sie! Finden Sie hier unser Impressumseite.')
+        
+        //- Open Graph meta Tags
+        meta(property='og:image' content="https://drgary.at/android-chrome-192x192.png")
+        meta(property='og:title' content="Prof. Dr. Thomas Gary - Impressum")
+        meta(property='og:description' content='Dr. Thomas Gary Facharzt für Gefäßmedizin und Innere Medizin - Zuhause in Graz - Willkommen in unserer Ordination, wir freuen uns auf Sie! Finden Sie hier unsere Impressumseite.')
+        meta(property='og:type' content="website")
+        meta(property='og:url' content="https://drgary.at/impressum")
+        meta(property='og:locale' content="de_DE")
+        meta(name="keywords" content="impressum, gefäßmedizin, medizin, innere medizin, graz, univ, doz, thomas, gary, ordination")
+
+        //- Manifest
+        link(rel='manifest' href='manifest.json')
+
+        //- Favicon
+        link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")
+        link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")
+        link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png")
+        link(rel="mask-icon", href="/safari-pinned-tab.svg", color="#5bbad5")
+        
+        meta(name="msapplication-TileColor", content="#da532c")
+        meta(name="theme-color", content="#ffffff")
+        
+        //- Screen
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+
+
+        include styles-include.pug
+    body
+        include ../../source/impressum/impressumbody.pug
+        include scripts-include.pug

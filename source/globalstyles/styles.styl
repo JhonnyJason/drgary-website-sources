@@ -1,35 +1,120 @@
 // globalstyles styles
+/*==============================================================================
+FONTS
+==============================================================================*/
+@font-face 
+    font-family: 'Museo 300'
+    src: url('/font/Museo_Slab_300.otf')
+    font-weight: normal
+    font-style: normal
+@font-face 
+    font-family: 'Museo 500'
+    src: url('/font/Museo_Slab_500.otf')
+    font-weight: normal
+    font-style: normal
+@font-face 
+    font-family: 'Museo 700'
+    src: url('/font/Museo_Slab_700.otf')
+    font-weight: normal
+    font-style: normal
+@font-face
+    font-family: 'Museo Sans'
+    src: url('/font/Museo_Sans_300.otf')
+    font-weight: normal
+    font-style: normal
+@font-face
+    font-family: 'Museo Sans 500'
+    src: url('/font/Museo_Sans_500.otf')
+    font-weight: normal
+    font-style: normal
 
 /*==========================================================
 Color Theme
 ==========================================================*/
-cd-foreground = white
-cd-flash = purple
-cd-background = black
+garyred = #ec2f5a
+linegray = #b5b1b1
 
 /*==========================================================
 Global Variables
 ==========================================================*/
-// max-content-width = 900px
-// mobile-side-padding = 15px
+contentwidth = 950px
+desktopscreen = 'screen and (min-width: %s)' %  contentwidth
+
+/*==========================================================
+Mixins
+==========================================================*/
+centered-background(src)
+    background-image url(src)
+    background-position: center
+    background-size: contain
+    background-repeat: no-repeat
+
+margin-content(margin)
+        width: 'calc(100% - ( %s * 2 ))' % margin
+        margin-left: margin
+        margin-right: margin
 
 
 /*==========================================================
 General Tag Styles
 ==========================================================*/
 body
-    background-color cd-background
-    color cd-foreground
-    font-family: Arial, Helvetica, sans-serif
-    text-align: center
-    font-size: 12pt
-    height 100vh
-    width 100%
-    overflow hidden
+    font-family: 'Museo Sans'
 
-h1
-    font-size: 17pt
-h2
-    font-size: 15pt
-p
-    font-size: 12pt
+h1, h2, h3, h4, h5
+    font-family: 'Museo 700'
+
+a
+    color: #2e2e2e
+    text-decoration: underline
+
+svg
+    height inherit
+    width inherit
+
+
+
+.clear
+    clear: both
+
+.tail
+    // centered-background("/img/logo.svg")
+    height:34px
+    margin-top: 80px
+    margin-bottom: 50px
+
+
+.has-content-width
+    width: 100%
+    @media desktopscreen
+        width: contentwidth
+        margin: auto
+
+
+#content
+    margin-top: 30px
+    h1
+        margin-content(20px)
+        margin-top: 50px
+        font-family: 'Museo 700'
+        font-size: 30px
+        margin-bottom: 25px
+        text-align: center
+        color: #000
+    h2
+        margin-content(5px)
+        font-family: 'Museo 700'
+        font-size: 25px
+        margin-top: 50px
+        margin-bottom: 15px
+    h2.name
+        margin-top: 0
+        margin-left: 20px
+        font-size: 20px
+        color: garyred
+    a
+        word-break: break-all 
+    .impressum-line
+        font-size: 20px
+        margin-bottom: 20px 
+        margin-left: 20px

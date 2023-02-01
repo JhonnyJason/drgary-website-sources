@@ -2,12 +2,14 @@ import Modules from "./allmodules"
 import domconnect from "./indexdomconnect"
 domconnect.initialize()
 
+############################################################
 global.allModules = Modules
+global.onIndexPage = true
 
 ############################################################
 appStartup = ->
     ## which modules shall be kickstarted?
-    # Modules.appcoremodule.startUp()
+    Modules.appcoremodule.startUp()
     return
 
 ############################################################
