@@ -1,0 +1,209 @@
+#contact-container
+    margin-content(20px)
+    font-size: 20px
+    p 
+        line-height: 120%
+        text-align: center
+    #contact-button-section
+        margin-top: 20px
+        margin-bottom:20px
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        @media desktopscreen
+            flex-direction: row
+        .contact-button-block
+            padding-top: 30px
+            padding-bottom: 30px
+            width: 100%
+            @media  desktopscreen
+                width: auto
+                display: block
+                margin: auto    
+            #call-appointment-button
+                display: block
+                margin: auto
+                cursor: pointer
+                button
+                    border-radius: 40%
+                    width: 60px
+                    height: 60px
+                    // border: solid 10px garyred
+                    // background-color: garyred
+                    centered-background("/img/call-icon.svg")
+                    display: inline-block
+                    vertical-align: middle
+                .call-number
+                    display: inline-block
+                    margin-left: 10px
+            #message-appointment-button
+                display: block
+                margin: auto
+                cursor: pointer
+                button
+                    border-radius: 40%
+                    width: 60px
+                    height: 60px
+                    // border: solid 10px garyred
+                    // background-color: garyred
+                    centered-background("/img/mail-icon.svg")
+                    display: inline-block
+                    vertical-align: middle
+                .message-email
+                    display: inline-block
+                    margin-left: 10px                    
+    #message-form[disabled="true"]
+        opacity 0.3
+        pointer-events none
+    #message-form
+        margin-content(20px)
+        display: block
+        margin-top: 30px
+        padding-top: 30px
+        @media desktopscreen
+            display: block
+            width: 50%
+            margin: auto
+        label
+            display: block
+            margin-bottom: 3px
+            font-size: 16px
+        input 
+            display: block
+            width: calc(100% - 20px)
+            margin-bottom: 15px
+            border-radius: 2px
+            padding: 3px 10px
+        input.missing
+            border: solid 3px #FC100D
+        textarea
+            display: block
+            width: calc(100% - 20px)
+            border-radius: 2px
+            padding: 3px 10px
+        textarea.missing
+            border: solid 3px #FC100D
+        button 
+            display: block
+            padding: 2px 30px
+            background-color: white
+            margin-top: 20px
+            font-size: 16px
+            border-radius: 2px
+            border: solid 1px #2e2e2e
+    .outline
+        padding-top 20px
+        padding-bottom 20px
+        padding-left: 20px
+        border-top: solid 1px #bbb
+        border-bottom: solid 1px #bbb
+    .line
+        margin-top: 50px
+        width: 100%
+        height: 1px
+        background-color: #bbb
+
+    #form-feedback
+        padding 20px
+        feedback-symbol-size = 50px
+        text-align center
+        #error-feedback
+            display: none
+        button 
+            padding: 2px 30px
+            background-color: white
+            margin-top: 20px
+            font-size: 16px
+            border-radius: 2px
+            border: solid 1px #2e2e2e
+        #error-feedback-text
+            color #FC100D
+        #success-feedback
+            display none
+            color #4BB543
+        #symbolic-feedback-line
+            padding-bottom 20px
+            display block
+            width 100%
+        #success-icon
+            display none
+            margin auto
+            color #4BB543
+            height: feedback-symbol-size
+            width: feedback-symbol-size
+            svg
+                height: feedback-symbol-size
+                width: feedback-symbol-size                
+        #failure-icon
+            display none
+            margin auto
+            color #FC100D
+            height: feedback-symbol-size
+            width: feedback-symbol-size
+            svg
+                height: feedback-symbol-size
+                width: feedback-symbol-size
+        #form-preloader
+            display none
+            margin auto
+            color garyred
+            height: feedback-symbol-size
+            width: feedback-symbol-size
+            position: relative
+            transform: translateZ(0);     
+        .circles
+            .preloader-element-1,
+            .preloader-element-2,
+            .preloader-element-3
+                position absolute
+                top 50%
+                left 50%
+                transform: translate(-50%, -50%)
+                height: 100%
+                width: 100%
+                box-sizing: border-box
+                animation circle-animation 1.2s infinite linear;
+                background-color transparent
+                border 3px solid currentcolor
+                border-radius 50%
+                
+            .preloader-element-1
+                animation-delay: -0.8s;
+
+            .preloader-element-2 
+                animation-delay: -0.4s;
+
+
+        @keyframes circle-animation
+            0%
+                transform: translate(-50%, -50%) scale(0)
+                opacity: 0;
+            60%
+                transform: translate(-50%, -50%) scale(0.5)
+                opacity: 1;
+            75%
+                opacity: 1;
+            100%
+                transform: translate(-50%, -50%) scale(1)
+                opacity: 0;
+    #form-feedback.error
+        #error-feedback
+            display block
+        #failure-icon
+            display block
+
+    #form-feedback.loading
+        #form-preloader
+            display block
+
+    #form-feedback.success
+        #success-feedback
+            display block
+        #success-icon
+            display: block
+
+    .tail
+        margin-top: 30px
+        margin-bottom: 60px
+

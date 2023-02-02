@@ -1,7 +1,7 @@
 ############################################################
 #region debug
 import { createLogFunctions } from "thingy-debug"
-{log, olog} = createLogFunctions("smoothscrolleffectmodule")
+{log, olog} = createLogFunctions("smoothscrollmodule")
 #endregion
 
 ############################################################
@@ -32,20 +32,24 @@ addScrollEffect = (chapterLink)->
     log "addScrollEffect"
     chapterId = chapterLink.getAttribute("chapter-id")
     log chapterId
-    return unless chapter? and chapter.length > 1
+    return unless chapterId? and chapterId.length > 1
     return unless chapterId[0] == "#"
     log "chapterId was valid!"
     chapterId = chapterId.slice(1)
 
     chapterElement = document.getElementById(chapterId)
-    scrollPosition = chapterElement.offsetTop - 120 # + headerHeight?
+    
+    if onServicesPage? 
+        scrollPosition = chapterElement.offsetTop - 160 # + headerHeight?
+        chapterLink.addEventListener("click", () -> v.scrollTo(scrollPosition))
+    else
+        pageSwitchScroll = (evnt) ->
+            evnt.preventDefault()
+            sessionStorage.setItem("scrollTo", chapterId)
+            return
 
-    scrollToChapter = (evnt) ->
-        evnt.preventDefault()
-        if onServicePage? then v.scrollTo(scrollPosition)
-        else sessionStorage.setItem("scrollTo", chapterId)
+        chapterLink.addEventListener("click", pageSwitchScroll)
 
-    chapterLink.addEventListener("click", scrollToChapter)
     return
 
 ############################################################

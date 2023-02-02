@@ -3,7 +3,6 @@
     position relative
     width: 100%
     height: auto
-    box-shadow: 0 0 4px 0 alpha(black, 0.2)
     #logo
         pointer-events: none
         display: block
@@ -64,6 +63,11 @@
             @media desktopscreen
                 flex-direction: row
                 margin: 0 auto
+            #header-menu-burger
+                display: none
+                height 30px
+                width 30px
+                margin auto
             .header-menu-item
                 text-transform: uppercase
                 cursor: pointer
@@ -89,24 +93,28 @@
             .header-menu-item.home
                 font-family: "Museo Sans 500"
     #header-menu-section.fixed
-            position: fixed
-            top:0
-            width: 100%
-            background-color: white
-            z-index: 999
-            #header-menu.collapsed
-                cursor: pointer
-                background-image: url("/img/hamburger.svg")
-                background-repeat: no-repeat
-                background-position: center
-                height: 30px
+        box-shadow: 0 0 4px 0 alpha(black, 0.2)
+        position: fixed
+        top:0
+        width: 100%
+        background-color: white
+        z-index: 999
+        #header-menu.collapsed
+            margin: 10px auto
+            cursor: pointer
+            height: 30px
+
+            #header-menu-burger
+                display block
+            @media desktopscreen
+                margin: 0 auto
+                height: auto
+                #header-menu-burger
+                    display none
+            .header-menu-item
+                display: none
                 @media desktopscreen
-                    height: auto
-                    background-image: none
-                .header-menu-item
-                    display: none
-                    @media desktopscreen
-                        display: block
+                    display: block
 
 
 // servicesubmenu
@@ -138,6 +146,9 @@
                 margin-right: auto
                 margin-bottom: 8px
                 padding: 8px 0
+            button:hover
+                background-color: rgba(228, 29, 76, 0.6)
+
 #outer-content-table.fixed
     position: fixed
     top: 70px

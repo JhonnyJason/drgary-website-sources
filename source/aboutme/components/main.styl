@@ -1,81 +1,80 @@
-#content
-    #aboutme-container
-        width: calc(100% - 40px)
-        margin: auto
-        display: flex
-        flex-direction: column
-        margin-bottom: 50px
-        @media desktopscreen
-            flex-direction: row
-            width: 100%
-        .left-block
-            // @media desktopscreen
-            //     width: 49%
-            p.signature-title
-                text-align: center
-                margin-top: 50px
-                font-family: 'Museo 500'
-            h2 
-                text-align: center
-                color: garyred
-                margin-top: 10px
-            .line
-                width: calc(100% - 40px)
-                height: 1px
-                background: #b5b1b1
-                margin: 0 20px 5px 20px
-                @media desktopscreen
-                    width: 100%
-                    margin:0 0 5px 0
-            img
-                display: block
-                width: 50px
-                margin: auto
-                margin-top: 40px
-                margin-bottom: 40px
-            p.quote
-                line-height: 120%
-                letter-spacing: 0.7px
-                text-align: center
-                // font-style: italic
-                margin-bottom: 30px
-                font-size: 18px
-                margin-top: 75px
-        .right-image
-            display: none
-            // @media desktopscreen
-            //     width: 49%
-            // img
-            //     display: block  
-            //     margin: auto
-            //     height: 300px
-    table
+#aboutme-container
+    width: calc(100% - 40px)
+    margin: auto
+    display: flex
+    flex-direction: column
+    margin-bottom: 50px
+    @media desktopscreen
+        flex-direction: row
         width: 100%
-        tr
-            border-top: solid 1px #bbb
+    .left-block
+        // @media desktopscreen
+        //     width: 49%
+        p.signature-title
+            text-align: center
+            margin-top: 50px
+            font-family: 'Museo 500'
+        h2 
+            text-align: center
+            color: garyred
+            margin-top: 10px
+        .line
+            width: calc(100% - 40px)
+            height: 1px
+            background: #b5b1b1
+            margin: 0 20px 5px 20px
+            @media desktopscreen
+                width: 100%
+                margin:0 0 5px 0
+        img
+            display: block
+            width: 50px
+            margin: auto
+            margin-top: 40px
+            margin-bottom: 40px
+        p.quote
+            line-height: 120%
+            letter-spacing: 0.7px
+            text-align: center
+            // font-style: italic
+            margin-bottom: 30px
             font-size: 18px
-            line-height: 1.2
-            td
-                padding: 10px
+            margin-top: 75px
+    .right-image
+        display: none
+        // @media desktopscreen
+        //     width: 49%
+        // img
+        //     display: block  
+        //     margin: auto
+        //     height: 300px
+table
+    width: 100%
+    tr
+        border-top: solid 1px #bbb
+        font-size: 18px
+        line-height: 1.2
+        td
+            padding: 10px
 
-    #publication-details
-        line-height: 120%
-        margin-content(5px)
-        font-size: 18px        
-        ul
-            margin-left: 15px
-            margin-bottom: 30px            
-            li
-                font-size: 20px
-                margin-bottom: 10px
-                padding-left: 15px
-        li:before
-            content:''
-            display:inline-block 
-            height:12px 
-            width:12px
-            background-image:url('/img/logo.svg') 
-            background-size:contain
-            background-repeat:no-repeat
-            padding-left: 10px
+#publication-details
+    line-height: 120%
+    margin-content(5px)
+    font-size: 18px        
+    ul
+        margin-left: 15px
+        margin-bottom: 30px            
+        li
+            font-size: 20px
+            margin-bottom: 10px
+            padding-left: 15px
+    li:before
+        content:''
+        display:inline-block 
+        height:12px 
+        width:12px
+        background-image:url('/img/logo.svg') 
+        background-size:contain
+        background-repeat:no-repeat
+        padding-left: 10px
 

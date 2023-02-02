@@ -12,7 +12,7 @@ appStartup = ->
     Modules.appcoremodule.startUp()
     
     scrollTo = sessionStorage.getItem("scrollTo")
-    if scrollTo then Modules.smoothscrolleffectmodule.immediateChapterScroll(scrollTo)
+    if scrollTo then Modules.smoothscrollmodule.immediateChapterScroll(scrollTo)
     sessionStorage.setItem("scrollTo", "")
     return
 

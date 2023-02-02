@@ -26,14 +26,13 @@ loadContactPage = () ->
 ############################################################
 export startUp = ->
     log "startUp"
-
     if headerTopSection and !onIndexPage?
         headerTopSection.addEventListener("click", loadIndexPage)
 
-    if menuLinkServices and !onServicePage?
+    if menuLinkServices and !onServicesPage?
         menuLinkServices.addEventListener("click", loadServicesPage)
         contentTable.addEventListener("click", loadServicesPage)
-    if menuLinkServices and onServicePage?
+    if menuLinkServices and onServicesPage?
         menuLinkServices.classList.add("home")
 
     if menuLinkOrdination and !onOrdinationPage?

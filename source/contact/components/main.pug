@@ -1,0 +1,49 @@
+#content.has-content-width
+    h1 Kontaktieren Sie uns und vereinbaren Sie einen Termin!
+    #contact-container
+        p Wir freuen uns über Ihren Anruf von Montag bis Freitag jeweils von 8:00 bis 18:00 Uhr.</br></br> Falls Sie uns ausserhalb der verfügbaren Zeiten kontaktieren möchten, können Sie uns auch gerne eine Nachricht hinterlassen. Wir bitten um Verständniss, dass diese Anfragen nur zu den gegebenen Zeiten bearbeitet werden.
+        #contact-button-section
+            .contact-button-block
+                #call-appointment-button
+                    button 
+                    .call-number +43 (0)664/881 887 28
+            .contact-button-block
+                #message-appointment-button
+                    button
+                    .message-email termin@drgary.at 
+        p.outline Nachricht über ein Formular:
+        form#message-form(disabled="true")
+            label(for="name-input") Name*:
+            input#name-input(placeholder="Namen eingeben" name="name" required)
+            label(for="email-input") E-Mail*:
+            input#email-input(type="text" name="email" placeholder="E-mail-Adresse eingeben" required)
+            label(for="company-input") Firma:
+            input#firm-input(type="text" name="company")
+            label(for="company-address-input") Geschäftsadresse:
+            input#company-address-input(type="text" name="company-address")
+            label(for="phonenumber-input") Telefonnummer:
+            input#phonenumber-input(type="text" name="phonenumber")
+            label(for="zip-code-input") PLZ:
+            input(type="text" name="zip-code" placeholder="Postleitzahl eingeben")
+            label(for="country-input") Land:
+            input(type="text" name="country" placeholder="Land eingeben")
+            label(for="message-textarea") Nachricht*:
+            textarea#message-textarea(name="message" cols="30" rows="10" placeholder="Nachricht eingeben" required)
+            button Senden
+        .line
+        #form-feedback
+            #symbolic-feedback-line
+                #form-preloader.preloader.circles
+                    .preloader-element-1
+                    .preloader-element-2
+                    .preloader-element-3
+                #success-icon <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle style="fill:currentColor;" cx="25" cy="25" r="25"></circle> <polyline style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points=" 38,15 22,33 12,25 "></polyline> </g></svg>
+
+                #failure-icon <svg viewBox="0 0 50 50"><g><circle style="fill:currentColor;" cx="25" cy="25" r="25"></circle> <polyline style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" points="16,34 25,25 34,16 "></polyline><polyline style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" points="16,16 25,25 34,34 "></polyline></g></svg>
+            #error-feedback
+                #error-feedback-text Ein Fehler ist aufgetreten.<br> Stellen Sie sicher, dass Sie online sind und versuchen Sie es erneuert. 
+                button Erneut versuchen
+            #success-feedback Ihre Anfrage wurde erfolgreich übermittelt. Wir werden uns bei Ihnen melden.
+
+    .tail
+    
