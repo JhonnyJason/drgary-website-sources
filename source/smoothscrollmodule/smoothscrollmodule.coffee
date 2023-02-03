@@ -79,7 +79,5 @@ weScrolled = (evnt) ->
 export chapterScroll = (chapterId) ->
     log "chapterScroll"
     chapterElement = document.getElementById(chapterId)
-    scrollPosition = chapterElement.offsetTop - 160 # + headerHeight?
-    if screen.width < 950 then scrollPosition -= 140
-    v.scrollTo(scrollPosition)
+    v.scrollTo(chapterElement)
     return
