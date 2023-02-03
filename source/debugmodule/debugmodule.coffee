@@ -3,11 +3,11 @@ import { addModulesToDebug } from "thingy-debug"
 ############################################################
 export modulesToDebug =
  
-    appcoremodule: true
+    # appcoremodule: true
     # configmodule: true
     # footermodule: true
-    headermodule: true
-    # mailedformmodule: true
+    # headermodule: true
+    mailedformmodule: true
     # smoothscrollmodule: true
     # statemodule: true
     # upbuttonmodule: true
