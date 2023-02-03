@@ -16,7 +16,7 @@ export initialize = ->
     menuLinkServices.addEventListener("mouseenter", mouseEnteredServices)
     menuLinkServices.addEventListener("mouseleave", mouseLeftServices)
 
-    if onServicePage?
+    if onServicesPage?
         menuLinkServices.addEventListener("click", servicesClicked)
         outerContentTable.classList.remove("closed")
 
@@ -33,7 +33,7 @@ headerMenuClicked = ->
     return
 
 servicesClicked = (event) ->
-    # log "servicesClicked"
+    log "servicesClicked"
     if S.get("serviceLinkClicked")
         S.set("serviceLinkClicked", false)
         closeOuterContentTable()
@@ -41,7 +41,7 @@ servicesClicked = (event) ->
         S.set("serviceLinkClicked", true)
         openOuterContentTable()
     log screen.width 
-    
+    # collapse()
     if screen.width < 950
         S.set("letCollapse", true)
     return

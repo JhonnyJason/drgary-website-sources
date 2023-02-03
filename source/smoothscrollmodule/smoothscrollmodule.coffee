@@ -41,6 +41,8 @@ addScrollEffect = (chapterLink)->
     
     if onServicesPage? 
         scrollPosition = chapterElement.offsetTop - 160 # + headerHeight?
+        if screen.width < 950 then scrollPosition -= 140
+
         chapterLink.addEventListener("click", () -> v.scrollTo(scrollPosition))
     else
         pageSwitchScroll = (evnt) ->

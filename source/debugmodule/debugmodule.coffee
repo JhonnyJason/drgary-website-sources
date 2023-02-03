@@ -8,7 +8,7 @@ export modulesToDebug =
     # footermodule: true
     headermodule: true
     # mailedformmodule: true
-    smoothscrollmodule: true
+    # smoothscrollmodule: true
     # statemodule: true
     # upbuttonmodule: true
     # vanillautilmodule: true

@@ -32,37 +32,38 @@
         width: 100%
         centered-background("/img/logo.svg")
         margin: 30px auto
-    #consent-block
-        display: none
-        position absolute
-        top 50%
-        left 50%
-        transform translate(-50%, -50%)
-        background-color white
-        border solid 2px garyred
-        padding 20px
-        box-sizing: border-box
-        h5
-            text-align: center
-            margin-bottom 10px
-        p
-            font-size 14px
-            margin-bottom  5px
-            margin-top 5px
-
-        button
-            background-color garyred
-            color white
-            font-size: 14px
-            font-weight: bold
-            padding 10px 20px
 
     #google-maps-frame
+        display block
         position relative
         width: 100%
         height: 400px
         margin-top: 60px
-        background-color #4d4d4d
+        background-image: url("/img/drgary-map.png")
+        background-size: cover
+        background-position center
+    #google-maps-address-frame
+        position absolute
+        top 20px
+        left 20px
+        max-width: 240px
+        padding 10px
+        box-sizing: border-box
+        background-color white
+        box-shadow 0 0 5px 0 alpha(black, 0.5)
+        h3
+            font-family: "Museo Sans 500"
+            font-size 13pt
+        p
+            margin-top 10px
+            margin-bottom 20px
+            font-size: 11pt
+            color #777
+            width auto
+            text-align: left
+            white-space: wrap
+            word-break: normal
+
     button
         display: block 
         margin: auto
@@ -78,7 +79,7 @@
     height: 800px
     @media desktopscreen
         height: 1231px
-    li
+    a
         overflow: hidden
         .preview
             transition: transform 0.5s ease
@@ -87,7 +88,7 @@
             background-position: center
             background-size: cover
             cursor: pointer
-    li:hover
+    a:hover
         .preview
             transform: scale(1.2)
     #list-item1
@@ -132,21 +133,21 @@
             height: 331px
 
     #gallery-image1
-        background-image: url("/img/gallery-1.jpg")
+        background-image: url("/img/gallery-1-preview.jpg")
     #gallery-image2
-        background-image: url("/img/gallery-2.jpg")
+        background-image: url("/img/gallery-2-preview.jpg")
     #gallery-image3
-        background-image: url("/img/gallery-3.jpg")
+        background-image: url("/img/gallery-3-preview.jpg")
     #gallery-image4
-        background-image: url("/img/gallery-4.jpg")
+        background-image: url("/img/gallery-4-preview.jpg")
     #gallery-image5
-        background-image: url("/img/gallery-5.jpg")
+        background-image: url("/img/gallery-5-preview.jpg")
     #gallery-image6
-        background-image: url("/img/gallery-6.jpg")
+        background-image: url("/img/gallery-6-preview.jpg")
     #gallery-image7
-        background-image: url("/img/gallery-7.jpg")
+        background-image: url("/img/gallery-7-preview.jpg")
     #gallery-image8
-        background-image: url("/img/gallery-8.jpg")
+        background-image: url("/img/gallery-8-preview.jpg")
         background-position: top
 
 // #imageGallery

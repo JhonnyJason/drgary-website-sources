@@ -34,7 +34,7 @@ export startUp = ->
         contentTable.addEventListener("click", loadServicesPage)
     if menuLinkServices and onServicesPage?
         menuLinkServices.classList.add("home")
-
+        
     if menuLinkOrdination and !onOrdinationPage?
         menuLinkOrdination.addEventListener("click", loadOrdinationPage)
     if menuLinkOrdination and onOrdinationPage?

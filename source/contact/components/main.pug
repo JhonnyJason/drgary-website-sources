@@ -5,11 +5,11 @@
         #contact-button-section
             .contact-button-block
                 #call-appointment-button
-                    button 
+                    button: svg: use(href="#svg-call-icon") 
                     .call-number +43 (0)664/881 887 28
             .contact-button-block
                 #message-appointment-button
-                    button
+                    button: svg: use(href="#svg-mail-icon")
                     .message-email termin@drgary.at 
         p.outline Nachricht über ein Formular:
         form#message-form(disabled="true")
