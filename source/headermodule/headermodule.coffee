@@ -41,7 +41,6 @@ servicesClicked = (event) ->
         S.set("serviceLinkClicked", true)
         openOuterContentTable()
     log screen.width 
-    # collapse()
     if screen.width < 950
         S.set("letCollapse", true)
     return

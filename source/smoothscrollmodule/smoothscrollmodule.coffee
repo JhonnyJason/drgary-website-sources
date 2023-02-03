@@ -36,14 +36,13 @@ addScrollEffect = (chapterLink)->
     return unless chapterId[0] == "#"
     log "chapterId was valid!"
     chapterId = chapterId.slice(1)
-
-    chapterElement = document.getElementById(chapterId)
     
     if onServicesPage? 
-        scrollPosition = chapterElement.offsetTop - 160 # + headerHeight?
-        if screen.width < 950 then scrollPosition -= 140
+        scrollToFunction = ->
+            chapterScroll(chapterId)
+            return
 
-        chapterLink.addEventListener("click", () -> v.scrollTo(scrollPosition))
+        chapterLink.addEventListener("click", scrollToFunction)
     else
         pageSwitchScroll = (evnt) ->
             evnt.preventDefault()
@@ -77,9 +76,10 @@ weScrolled = (evnt) ->
     return        
 
 ############################################################
-export immediateChapterScroll = (chapterId) ->
-    log "immediateChapterScroll"
+export chapterScroll = (chapterId) ->
+    log "chapterScroll"
     chapterElement = document.getElementById(chapterId)
-    scrollPosition = chapterElement.offsetTop - 120 # + headerHeight?
+    scrollPosition = chapterElement.offsetTop - 160 # + headerHeight?
+    if screen.width < 950 then scrollPosition -= 140
     v.scrollTo(scrollPosition)
     return

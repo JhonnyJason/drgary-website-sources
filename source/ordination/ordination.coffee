@@ -20,7 +20,7 @@ appStartup = ->
         pswpModule: PhotoSwipe,
         bgOpacity: 0.7,
         errorMsg: 'Bild konnte nicht geladen werden.'
-    });
+    })
     lightbox.init()
     return
 
